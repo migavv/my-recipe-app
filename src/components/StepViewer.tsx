@@ -56,7 +56,7 @@ export default function StepViewer({ recipe }: { recipe: Recipe }) {
                                         audioRef.current.play();
                                     }
                                 }}
-                                className="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-full text-lg shadow"
+                                className="bg-blue-400 hover:bg-blue-500 text-white text-2xl px-5 py-3 rounded-full shadow"
                             >
                                 🔊
                             </button>
@@ -72,7 +72,7 @@ export default function StepViewer({ recipe }: { recipe: Recipe }) {
                     disabled={index === 0}
                     onClick={() => setIndex(index - 1)}
                     aria-label="Previous step"
-                    className="bg-purple-400 hover:bg-purple-500 disabled:bg-purple-200 text-white text-2xl px-6 py-3 rounded-full shadow"
+                    className="bg-purple-400 hover:bg-purple-500 disabled:bg-purple-200 text-white text-3xl px-6 py-3 rounded-full shadow"
                 >
                     ←
                 </button>
@@ -82,7 +82,7 @@ export default function StepViewer({ recipe }: { recipe: Recipe }) {
                     disabled={index === recipe.steps.length - 1}
                     onClick={() => setIndex(index + 1)}
                     aria-label="Next step"
-                    className="bg-green-400 hover:bg-green-500 disabled:bg-green-200 text-white text-2xl px-6 py-3 rounded-full shadow"
+                    className="bg-green-400 hover:bg-green-500 disabled:bg-green-200 text-white text-3xl px-6 py-3 rounded-full shadow"
                 >
                     →
                 </button>

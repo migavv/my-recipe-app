@@ -9,10 +9,10 @@ export default function RecipePage() {
     if (!recipe) return <div className="text-center text-2xl p-10">Recipe not found 🥺</div>;
 
     return (
-        <div className="min-h-screen bg-yellow-50 px-4 py-6">
+        <div className="min-h-screen bg-gradient-to-br from-pink-100 via-yellow-100 to-green-100 px-4 py-6">
             <div className="max-w-2xl mx-auto">
                 <Link to="/" className="inline-block mb-4">
-                    <button className="bg-blue-400 hover:bg-blue-500 text-white text-lg px-6 py-2 rounded-full shadow transition">
+                    <button className="bg-blue-400 hover:bg-blue-500 text-white text-2xl px-6 py-2 rounded-full shadow transition">
                         🏠
                     </button>
                 </Link>
