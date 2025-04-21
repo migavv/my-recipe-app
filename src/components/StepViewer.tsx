@@ -1,10 +1,11 @@
-import { useState } from "react";
+import {useRef, useState} from "react";
 import { Recipe } from "../data/recipes";
 import {AnimatePresence, motion} from "framer-motion";
 
 export default function StepViewer({ recipe }: { recipe: Recipe }) {
     const [index, setIndex] = useState(0);
     const step = recipe.steps[index];
+    const audioRef = useRef<HTMLAudioElement | null>(null);
 
     const progressPercent = ((index + 1) / recipe.steps.length) * 100;
 
@@ -40,11 +41,24 @@ export default function StepViewer({ recipe }: { recipe: Recipe }) {
                         ✨ {step.text}
                     </p>
 
+                    {/* Custom Audio Replay Button */}
                     {step.audio && (
-                        <audio controls className="w-full mt-2">
-                            <source src={step.audio} type="audio/mpeg" />
-                            Your browser does not support the audio element.
-                        </audio>
+                        <>
+                            <audio ref={audioRef}>
+                                <source src={step.audio} type="audio/mpeg" />
+                            </audio>
+                            <button
+                                onClick={() => {
+                                    if (audioRef.current) {
+                                        audioRef.current.currentTime = 0;
+                                        audioRef.current.play();
+                                    }
+                                }}
+                                className="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-full text-lg shadow"
+                            >
+                                🔊 Replay
+                            </button>
+                        </>
                     )}
                 </motion.div>
             </AnimatePresence>
