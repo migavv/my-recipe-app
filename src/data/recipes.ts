@@ -15,7 +15,7 @@ export interface Recipe {
 export const recipes: Recipe[] = [
     {
         id: "sw",
-        title: "Sanduche",
+        title: "Sánduche",
         image: "/images/sw/cover.png",
         steps: [
             {

@@ -31,11 +31,13 @@ export default function StepViewer({ recipe }: { recipe: Recipe }) {
                     transition={{ duration: 0.4 }}
                     className="w-full flex flex-col items-center gap-4"
                 >
-                    <img
-                        src={step.image}
-                        alt={step.text}
-                        className="rounded-xl w-full max-h-64 object-contain border-4 border-yellow-200"
-                    />
+                    <div className="w-full aspect-square overflow-hidden rounded-xl border-4 border-yellow-200">
+                        <img
+                            src={step.image}
+                            alt={step.text}
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
 
                     <p className="text-2xl font-semibold text-center text-gray-800">
                         ✨ {step.text}
