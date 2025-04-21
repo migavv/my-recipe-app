@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import {Link, useParams } from "react-router-dom";
 import { recipes } from "../data/recipes";
 import StepViewer from "../components/StepViewer";
 
@@ -11,6 +11,11 @@ export default function RecipePage() {
     return (
         <div className="min-h-screen bg-yellow-50 px-4 py-6">
             <div className="max-w-2xl mx-auto">
+                <Link to="/" className="inline-block mb-4">
+                    <button className="bg-blue-400 hover:bg-blue-500 text-white text-lg px-6 py-2 rounded-full shadow transition">
+                        🏠 Back to Recipes
+                    </button>
+                </Link>
                 <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-orange-600 mb-6 drop-shadow">
                     🍽️ {recipe.title}
                 </h1>
