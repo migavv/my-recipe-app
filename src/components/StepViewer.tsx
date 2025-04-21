@@ -5,18 +5,33 @@ export default function StepViewer({ recipe }: { recipe: Recipe }) {
     const [index, setIndex] = useState(0);
     const step = recipe.steps[index];
 
+    const progressPercent = ((index + 1) / recipe.steps.length) * 100;
+
     return (
         <div className="bg-white rounded-3xl shadow-2xl p-6 flex flex-col items-center gap-6">
+            {/* Progress Bar */}
+            <div className="w-full">
+                <div className="h-4 w-full bg-gray-200 rounded-full overflow-hidden mb-4">
+                    <div
+                        className="h-full bg-green-400 transition-all duration-300"
+                        style={{ width: `${progressPercent}%` }}
+                    />
+                </div>
+            </div>
+
+            {/* Image */}
             <img
                 src={step.image}
                 alt={step.text}
                 className="rounded-xl w-full max-h-64 object-contain border-4 border-yellow-200"
             />
 
+            {/* Step Text */}
             <p className="text-2xl font-semibold text-center text-gray-800">
                 ✨ {step.text}
             </p>
 
+            {/* Optional Audio */}
             {step.audio && (
                 <audio controls className="w-full mt-2">
                     <source src={step.audio} type="audio/mpeg" />
@@ -24,6 +39,7 @@ export default function StepViewer({ recipe }: { recipe: Recipe }) {
                 </audio>
             )}
 
+            {/* Navigation */}
             <div className="flex gap-4 mt-4">
                 <button
                     disabled={index === 0}
@@ -39,10 +55,6 @@ export default function StepViewer({ recipe }: { recipe: Recipe }) {
                 >
                     Next ➡
                 </button>
-            </div>
-
-            <div className="text-sm text-gray-500 mt-2">
-                Step {index + 1} of {recipe.steps.length}
             </div>
         </div>
     );
