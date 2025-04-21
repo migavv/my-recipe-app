@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Recipe } from "../data/recipes";
+import {AnimatePresence, motion} from "framer-motion";
 
 export default function StepViewer({ recipe }: { recipe: Recipe }) {
     const [index, setIndex] = useState(0);
@@ -19,25 +20,34 @@ export default function StepViewer({ recipe }: { recipe: Recipe }) {
                 </div>
             </div>
 
-            {/* Image */}
-            <img
-                src={step.image}
-                alt={step.text}
-                className="rounded-xl w-full max-h-64 object-contain border-4 border-yellow-200"
-            />
+            {/* Animated Step Section */}
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -50 }}
+                    transition={{ duration: 0.4 }}
+                    className="w-full flex flex-col items-center gap-4"
+                >
+                    <img
+                        src={step.image}
+                        alt={step.text}
+                        className="rounded-xl w-full max-h-64 object-contain border-4 border-yellow-200"
+                    />
 
-            {/* Step Text */}
-            <p className="text-2xl font-semibold text-center text-gray-800">
-                ✨ {step.text}
-            </p>
+                    <p className="text-2xl font-semibold text-center text-gray-800">
+                        ✨ {step.text}
+                    </p>
 
-            {/* Optional Audio */}
-            {step.audio && (
-                <audio controls className="w-full mt-2">
-                    <source src={step.audio} type="audio/mpeg" />
-                    Your browser does not support the audio element.
-                </audio>
-            )}
+                    {step.audio && (
+                        <audio controls className="w-full mt-2">
+                            <source src={step.audio} type="audio/mpeg" />
+                            Your browser does not support the audio element.
+                        </audio>
+                    )}
+                </motion.div>
+            </AnimatePresence>
 
             {/* Navigation */}
             <div className="flex gap-4 mt-4">
