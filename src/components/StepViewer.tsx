@@ -56,7 +56,7 @@ export default function StepViewer({ recipe }: { recipe: Recipe }) {
                                 }}
                                 className="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-full text-lg shadow"
                             >
-                                🔊 Replay
+                                🔊
                             </button>
                         </>
                     )}
@@ -65,19 +65,24 @@ export default function StepViewer({ recipe }: { recipe: Recipe }) {
 
             {/* Navigation */}
             <div className="flex gap-4 mt-4">
+                {/* Back */}
                 <button
                     disabled={index === 0}
                     onClick={() => setIndex(index - 1)}
-                    className="bg-purple-300 hover:bg-purple-400 disabled:bg-purple-100 text-white text-lg px-6 py-2 rounded-full shadow"
+                    aria-label="Previous step"
+                    className="bg-purple-400 hover:bg-purple-500 disabled:bg-purple-200 text-white text-2xl px-6 py-3 rounded-full shadow"
                 >
-                    ⬅ Back
+                    ←
                 </button>
+
+                {/* Next */}
                 <button
                     disabled={index === recipe.steps.length - 1}
                     onClick={() => setIndex(index + 1)}
-                    className="bg-green-400 hover:bg-green-500 disabled:bg-green-200 text-white text-lg px-6 py-2 rounded-full shadow"
+                    aria-label="Next step"
+                    className="bg-green-400 hover:bg-green-500 disabled:bg-green-200 text-white text-2xl px-6 py-3 rounded-full shadow"
                 >
-                    Next ➡
+                    →
                 </button>
             </div>
         </div>
