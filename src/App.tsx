@@ -4,7 +4,7 @@ import RecipePage from "./pages/Recipe";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/my-recipe-app">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/recipe/:id" element={<RecipePage />} />
