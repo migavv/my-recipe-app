@@ -49,5 +49,37 @@ export const recipes: Recipe[] = [
                 audio: "/my-recipe-app/audio/test_audio.mp3"
             }
         ]
+    },
+    {
+        id: "pasta",
+        title: "Pasta",
+        image: "/my-recipe-app/images/pasta/cover.png",
+        steps: [
+            {
+                image: "/my-recipe-app/images/pasta/1.png",
+                text: "Hierve agua en una olla",
+                audio: "/my-recipe-app/audio/test_audio.mp3"
+            },
+            {
+                image: "/my-recipe-app/images/pasta/2.png",
+                text: "Agrega la pasta",
+                audio: "/my-recipe-app/audio/test_audio.mp3"
+            },
+            {
+                image: "/my-recipe-app/images/pasta/3.png",
+                text: "Revuelve de vez en cuando",
+                audio: "/my-recipe-app/audio/test_audio.mp3"
+            },
+            {
+                image: "/my-recipe-app/images/pasta/4.png",
+                text: "Escurre el agua",
+                audio: "/my-recipe-app/audio/test_audio.mp3"
+            },
+            {
+                image: "/my-recipe-app/images/pasta/5.png",
+                text: "¡Sirve con salsa!",
+                audio: "/my-recipe-app/audio/test_audio.mp3"
+            }
+        ]
     }
 ];
