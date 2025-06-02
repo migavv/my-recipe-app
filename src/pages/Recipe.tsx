@@ -19,20 +19,20 @@ export default function RecipePage() {
     );
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-pink-200 via-yellow-100 to-green-200 px-4 sm:px-6 py-6 sm:py-8">
-            <div className="max-w-3xl mx-auto">
-                <Link to="/" className="inline-block mb-6 sm:mb-8">
-                    <button className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white text-2xl sm:text-3xl px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg transition-transform hover:scale-110">
-                        🏠
-                    </button>
-                </Link>
+        <div className="min-h-screen bg-gradient-to-br from-pink-200 via-yellow-100 to-green-200 flex flex-col items-center justify-start px-2 sm:px-4 py-4">
+        <div className="w-full max-w-2xl flex flex-col items-center">
+        <Link to="/" className="sticky top-4 self-start z-50">
+        <button className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white text-2xl sm:text-3xl px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg transition-transform hover:scale-110">
+            🏠
+        </button>
+        </Link>
+            <h1 className="text-4xl sm:text-5xl font-lilita text-center text-pink-500 mb-6 drop-shadow-md leading-tight">
+            🍽️ {recipe.title}
+            </h1>
 
-                <h1 className="text-4xl sm:text-6xl font-lilita text-center text-pink-500 mb-8 sm:mb-10 drop-shadow-md leading-tight">
-                    🍽️ {recipe.title}
-                </h1>
-
-                <StepViewer recipe={recipe} />
-            </div>
+            <StepViewer recipe={recipe} />
         </div>
+        </div>
+
     );
 }

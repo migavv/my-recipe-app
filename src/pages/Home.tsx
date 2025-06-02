@@ -9,7 +9,7 @@ export default function Home() {
                     <h1 className="text-4xl sm:text-6xl lg:text-7xl font-lilita text-pink-500 drop-shadow-lg leading-tight">
                         🍓 ¡Preparemos una receta! 🧁
                     </h1>
-                    <p className="mt-4 text-lg sm:text-2xl text-purple-500 font-fredoka leading-relaxed">
+                    <p className="mt-4 text-lgz sm:text-2xl text-purple-500 font-fredoka leading-relaxed">
                         Elige tu favorita y cocina jugando 🎈🍳
                     </p>
                 </header>
