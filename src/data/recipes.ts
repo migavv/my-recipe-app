@@ -21,32 +21,32 @@ export const recipes: Recipe[] = [
             {
                 image: "/my-recipe-app/images/sw/1.png",
                 text: "Coloca dos tajadas de pan sobre la mesa",
-                audio: "/my-recipe-app/audio/sw/1.m4a"
+                audio: "/my-recipe-app/audio/sw/1.mp3"
             },
             {
                 image: "/my-recipe-app/images/sw/2.png",
                 text: "Toma una loncha de queso del paquete",
-                audio: "/my-recipe-app/audio/sw/2.m4a"
+                audio: "/my-recipe-app/audio/sw/2.mp3"
             },
             {
                 image: "/my-recipe-app/images/sw/3.png",
                 text: "Pon el queso sobre una de las tajadas de pan",
-                audio: "/my-recipe-app/audio/sw/3.m4a"
+                audio: "/my-recipe-app/audio/sw/3.mp3"
             },
             {
                 image: "/my-recipe-app/images/sw/4.png",
                 text: "Pon la segunda tajada de pan sobre el queso",
-                audio: "/my-recipe-app/audio/sw/4.m4a"
+                audio: "/my-recipe-app/audio/sw/4.mp3"
             },
             {
                 image: "/my-recipe-app/images/sw/5.png",
                 text: "Presiona el sanduche entre tus manos",
-                audio: "/my-recipe-app/audio/sw/5.m4a"
+                audio: "/my-recipe-app/audio/sw/5.mp3"
             },
             {
                 image: "/my-recipe-app/images/sw/6.png",
                 text: "Lo lograste!",
-                audio: "/my-recipe-app/audio/sw/6.m4a"
+                audio: "/my-recipe-app/audio/sw/6.mp3"
             }
         ]
     },
@@ -58,27 +58,27 @@ export const recipes: Recipe[] = [
             {
                 image: "/my-recipe-app/images/pasta/1.png",
                 text: "Hierve agua en una olla",
-                audio: "/my-recipe-app/audio/pasta/1.m4a"
+                audio: "/my-recipe-app/audio/pasta/1.mp3"
             },
             {
                 image: "/my-recipe-app/images/pasta/2.png",
                 text: "Agrega la pasta",
-                audio: "/my-recipe-app/audio/pasta/2.m4a"
+                audio: "/my-recipe-app/audio/pasta/2.mp3"
             },
             {
                 image: "/my-recipe-app/images/pasta/3.png",
                 text: "Revuelve de vez en cuando",
-                audio: "/my-recipe-app/audio/pasta/3.m4a"
+                audio: "/my-recipe-app/audio/pasta/3.mp3"
             },
             {
                 image: "/my-recipe-app/images/pasta/4.png",
                 text: "Escurre el agua",
-                audio: "/my-recipe-app/audio/pasta/4.m4a"
+                audio: "/my-recipe-app/audio/pasta/4.mp3"
             },
             {
                 image: "/my-recipe-app/images/pasta/5.png",
                 text: "¡Sirve con salsa!",
-                audio: "/my-recipe-app/audio/pasta/5.m4a"
+                audio: "/my-recipe-app/audio/pasta/5.mp3"
             }
         ]
     },
