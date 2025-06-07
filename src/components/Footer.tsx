@@ -8,7 +8,7 @@ export default function Footer() {
                 className="h-16 mb-4"
             />
             <p className="text-sm sm:text-base text-purple-600 font-fredoka">
-                Desarrollado por Miguel Gaviria Escobar - Universidad EIA
+                Miguel Gaviria - Universidad EIA
             </p>
         </footer>
     );
