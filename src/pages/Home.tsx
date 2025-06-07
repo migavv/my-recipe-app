@@ -1,5 +1,6 @@
 import { recipes } from "../data/recipes";
 import RecipeCard from "../components/RecipeCard";
+import Footer from "../components/Footer.tsx";
 
 export default function Home() {
     return (
@@ -20,6 +21,7 @@ export default function Home() {
                     ))}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
